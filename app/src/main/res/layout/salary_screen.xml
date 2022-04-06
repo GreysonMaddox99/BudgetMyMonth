@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_weight="1">
+    android:layout_weight="1"
+    android:background="#9EC887">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -22,17 +23,19 @@
 
         <Button
             android:id="@+id/monthly_button"
+            style="@style/Widget.AppCompat.Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Monthly" />
+            android:text="@string/monthly" />
 
         <Button
             android:id="@+id/quarterly_button"
+            style="@style/Widget.AppCompat.Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Quarterly" />
+            android:text="@string/quarterly" />
     </LinearLayout>
 
     <LinearLayout
@@ -48,17 +51,19 @@
 
         <Button
             android:id="@+id/weekly_button"
+            style="@style/Widget.AppCompat.Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Weekly" />
+            android:text="@string/weekly" />
 
         <Button
             android:id="@+id/biweekly_button"
+            style="@style/Widget.AppCompat.Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Biweekly" />
+            android:text="@string/biweekly" />
     </LinearLayout>
 
     <LinearLayout
@@ -74,10 +79,10 @@
 
         <Button
             android:id="@+id/annually_button"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Annually" />
+            android:text="@string/annually" />
     </LinearLayout>
 
     <TextView
@@ -85,7 +90,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="120dp"
-        android:text="Input how much you are paid each \n pay period (after taxes) below, and select \n the corresponding pay period"
+        android:text="@string/input_how_much_you_are_paid_each_n_pay_period_after_taxes_below_and_select_n_the_corresponding_pay_period"
         android:textAlignment="center"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -99,10 +104,11 @@
         android:ems="10"
         android:inputType="numberDecimal"
         android:minHeight="48dp"
-        android:text="0"
         android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/salary_header_text" />
+        app:layout_constraintTop_toBottomOf="@+id/salary_header_text"
+        android:autofillHints="0"
+        tools:ignore="LabelFor" />
 </androidx.constraintlayout.widget.ConstraintLayout>

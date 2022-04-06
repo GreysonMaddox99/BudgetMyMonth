@@ -1,9 +1,10 @@
 package com.codeacademy.budgetmymonth;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.RadioGroup;
 import android.widget.RadioButton;
@@ -14,6 +15,7 @@ public class SpendingType extends AppCompatActivity {
     Button budgetMeButton;
     RadioButton frugalButton, spendthriftButton, averageButton;
     RadioGroup spendingType;
+    @SuppressLint("UseSwitchCompatOrMaterialCode")
     Switch aggressive;
     int paymentsInYear;
     int wants, needs, savings, investments;
@@ -32,71 +34,68 @@ public class SpendingType extends AppCompatActivity {
         budgetMeButton = findViewById(R.id.budget_me_button);
         spendingType = findViewById(R.id.spenders);
         aggressive = findViewById(R.id.aggressive_switch);
-        budgetMeButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // Click-handling logic
-                int spenderButtonId = spendingType.getCheckedRadioButtonId();
-                if (spenderButtonId == frugalButton.getId()) {
-                    if (aggressive.isChecked()) {
-                        Budget budget = new Budget(paymentPerPeriod, paymentsInYear, true, "Frugal");
-                        budget.createMonthlyBudget();
-                        needs = budget.needsBudget;
-                        wants = budget.wantsBudget;
-                        savings = budget.savingsBudget;
-                        investments = budget.investingBudget;
-                    } else {
-                        Budget budget = new Budget(paymentPerPeriod, paymentsInYear, false, "Frugal");
-                        budget.createMonthlyBudget();
-                        needs = budget.needsBudget;
-                        wants = budget.wantsBudget;
-                        savings = budget.savingsBudget;
-                        investments = budget.investingBudget;
-                    }
-                } else if (spenderButtonId == spendthriftButton.getId()) {
-                    if (aggressive.isChecked()) {
-                        Budget budget = new Budget(paymentPerPeriod, paymentsInYear, true, "Treat Myself");
-                        budget.createMonthlyBudget();
-                        needs = budget.needsBudget;
-                        wants = budget.wantsBudget;
-                        savings = budget.savingsBudget;
-                        investments = budget.investingBudget;
-                    } else {
-                        Budget budget = new Budget(paymentPerPeriod, paymentsInYear, false, "Treat Myself");
-                        budget.createMonthlyBudget();
-                        needs = budget.needsBudget;
-                        wants = budget.wantsBudget;
-                        savings = budget.savingsBudget;
-                        investments = budget.investingBudget;
-                    }
+        budgetMeButton.setOnClickListener(view -> {
+            // Click-handling logic
+            int spenderButtonId = spendingType.getCheckedRadioButtonId();
+            if (spenderButtonId == frugalButton.getId()) {
+                if (aggressive.isChecked()) {
+                    Budget budget = new Budget(paymentPerPeriod, paymentsInYear, true, "Frugal");
+                    budget.createMonthlyBudget();
+                    needs = budget.needsBudget;
+                    wants = budget.wantsBudget;
+                    savings = budget.savingsBudget;
+                    investments = budget.investingBudget;
                 } else {
-                    if (aggressive.isChecked()) {
-                        Budget budget = new Budget(paymentPerPeriod, paymentsInYear, true, "Average");
-                        budget.createMonthlyBudget();
-                        needs = budget.needsBudget;
-                        wants = budget.wantsBudget;
-                        savings = budget.savingsBudget;
-                        investments = budget.investingBudget;
-                    } else {
-                        Budget budget = new Budget(paymentPerPeriod, paymentsInYear, false, "Average");
-                        budget.createMonthlyBudget();
-                        needs = budget.needsBudget;
-                        wants = budget.wantsBudget;
-                        savings = budget.savingsBudget;
-                        investments = budget.investingBudget;
-                    }
+                    Budget budget = new Budget(paymentPerPeriod, paymentsInYear, false, "Frugal");
+                    budget.createMonthlyBudget();
+                    needs = budget.needsBudget;
+                    wants = budget.wantsBudget;
+                    savings = budget.savingsBudget;
+                    investments = budget.investingBudget;
                 }
-                Intent intent = new Intent(SpendingType.this, ResultsScreen.class);
-                String needsResult = "$" + needs + " on Needs";
-                String wantsResult = "$" + wants + " on Wants";
-                String savingsResult = "$" + savings + " on Savings";
-                String investmentsResult = "$" + investments + " on Investments";
-                intent.putExtra("needs", needsResult);
-                intent.putExtra("wants", wantsResult);
-                intent.putExtra("savings", savingsResult);
-                intent.putExtra("investments", investmentsResult);
-                startActivity(intent);
+            } else if (spenderButtonId == spendthriftButton.getId()) {
+                if (aggressive.isChecked()) {
+                    Budget budget = new Budget(paymentPerPeriod, paymentsInYear, true, "Treat Myself");
+                    budget.createMonthlyBudget();
+                    needs = budget.needsBudget;
+                    wants = budget.wantsBudget;
+                    savings = budget.savingsBudget;
+                    investments = budget.investingBudget;
+                } else {
+                    Budget budget = new Budget(paymentPerPeriod, paymentsInYear, false, "Treat Myself");
+                    budget.createMonthlyBudget();
+                    needs = budget.needsBudget;
+                    wants = budget.wantsBudget;
+                    savings = budget.savingsBudget;
+                    investments = budget.investingBudget;
+                }
+            } else {
+                if (aggressive.isChecked()) {
+                    Budget budget = new Budget(paymentPerPeriod, paymentsInYear, true, "Average");
+                    budget.createMonthlyBudget();
+                    needs = budget.needsBudget;
+                    wants = budget.wantsBudget;
+                    savings = budget.savingsBudget;
+                    investments = budget.investingBudget;
+                } else {
+                    Budget budget = new Budget(paymentPerPeriod, paymentsInYear, false, "Average");
+                    budget.createMonthlyBudget();
+                    needs = budget.needsBudget;
+                    wants = budget.wantsBudget;
+                    savings = budget.savingsBudget;
+                    investments = budget.investingBudget;
+                }
             }
+            Intent intent1 = new Intent(SpendingType.this, ResultsScreen.class);
+            String needsResult = "$" + needs + " on Needs";
+            String wantsResult = "$" + wants + " on Wants";
+            String savingsResult = "$" + savings + " on Savings";
+            String investmentsResult = "$" + investments + " on Investments";
+            intent1.putExtra("needs", needsResult);
+            intent1.putExtra("wants", wantsResult);
+            intent1.putExtra("savings", savingsResult);
+            intent1.putExtra("investments", investmentsResult);
+            startActivity(intent1);
         });
 
     }

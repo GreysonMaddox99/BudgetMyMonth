@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#9EC887"
     tools:context=".MainActivity">
 
     <TextView
@@ -11,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
-        android:text="Per month, you should spend: "
+        android:text="@string/per_month_you_should_spend"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -21,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="104dp"
-        android:text="$0 on Wants"
+        android:text="@string/_0_on_wants"
         app:layout_constraintEnd_toEndOf="@+id/needs_results"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/needs_results"
@@ -32,7 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="96dp"
-        android:text="$0 on Savings"
+        android:text="@string/_0_on_savings"
         app:layout_constraintEnd_toEndOf="@+id/wants_results"
         app:layout_constraintStart_toStartOf="@+id/wants_results"
         app:layout_constraintTop_toBottomOf="@+id/wants_results" />
@@ -42,7 +43,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="104dp"
-        android:text="$0 on Investments"
+        android:text="@string/_0_on_investments"
         app:layout_constraintEnd_toEndOf="@+id/savings_results"
         app:layout_constraintHorizontal_bias="0.518"
         app:layout_constraintStart_toStartOf="@+id/savings_results"
@@ -53,7 +54,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="96dp"
-        android:text="$0 on Needs"
+        android:text="@string/_0_on_needs"
         app:layout_constraintEnd_toEndOf="@+id/results_header_text"
         app:layout_constraintStart_toStartOf="@+id/results_header_text"
         app:layout_constraintTop_toBottomOf="@+id/results_header_text" />

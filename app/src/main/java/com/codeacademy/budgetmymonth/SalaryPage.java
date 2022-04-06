@@ -3,7 +3,6 @@ package com.codeacademy.budgetmymonth;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -23,65 +22,50 @@ public class SalaryPage extends AppCompatActivity {
         quarterlyButton = findViewById(R.id.quarterly_button);
         biweeklyButton = findViewById(R.id.biweekly_button);
         annuallyButton = findViewById(R.id.annually_button);
-        annuallyButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // Click-handling logic
-                paymentsInYear = 1;
-                paymentPerPeriod = Double.parseDouble(clientInput.getText().toString());
-                Intent intent = new Intent(SalaryPage.this, SpendingType.class);
-                intent.putExtra("periods", paymentsInYear);
-                intent.putExtra("payment", paymentPerPeriod);
-                startActivity(intent);
-            }
+        annuallyButton.setOnClickListener(view -> {
+            // Click-handling logic
+            paymentsInYear = 1;
+            paymentPerPeriod = Double.parseDouble(clientInput.getText().toString());
+            Intent intent = new Intent(SalaryPage.this, SpendingType.class);
+            intent.putExtra("periods", paymentsInYear);
+            intent.putExtra("payment", paymentPerPeriod);
+            startActivity(intent);
         });
-        weeklyButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // Click-handling logic
-                paymentsInYear = 52;
-                paymentPerPeriod = Double.parseDouble(clientInput.getText().toString());
-                Intent intent = new Intent(SalaryPage.this, SpendingType.class);
-                intent.putExtra("periods", paymentsInYear);
-                intent.putExtra("payment", paymentPerPeriod);
-                startActivity(intent);
-            }
+        weeklyButton.setOnClickListener(view -> {
+            // Click-handling logic
+            paymentsInYear = 52;
+            paymentPerPeriod = Double.parseDouble(clientInput.getText().toString());
+            Intent intent = new Intent(SalaryPage.this, SpendingType.class);
+            intent.putExtra("periods", paymentsInYear);
+            intent.putExtra("payment", paymentPerPeriod);
+            startActivity(intent);
         });
-        monthlyButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // Click-handling logic
-                paymentsInYear = 12;
-                paymentPerPeriod = Double.parseDouble(clientInput.getText().toString());
-                Intent intent = new Intent(SalaryPage.this, SpendingType.class);
-                intent.putExtra("periods", paymentsInYear);
-                intent.putExtra("payment", paymentPerPeriod);
-                startActivity(intent);
-            }
+        monthlyButton.setOnClickListener(view -> {
+            // Click-handling logic
+            paymentsInYear = 12;
+            paymentPerPeriod = Double.parseDouble(clientInput.getText().toString());
+            Intent intent = new Intent(SalaryPage.this, SpendingType.class);
+            intent.putExtra("periods", paymentsInYear);
+            intent.putExtra("payment", paymentPerPeriod);
+            startActivity(intent);
         });
-        biweeklyButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // Click-handling logic
-                paymentsInYear = 26;
-                paymentPerPeriod = Double.parseDouble(clientInput.getText().toString());
-                Intent intent = new Intent(SalaryPage.this, SpendingType.class);
-                intent.putExtra("periods", paymentsInYear);
-                intent.putExtra("payment", paymentPerPeriod);
-                startActivity(intent);
-            }
+        biweeklyButton.setOnClickListener(view -> {
+            // Click-handling logic
+            paymentsInYear = 26;
+            paymentPerPeriod = Double.parseDouble(clientInput.getText().toString());
+            Intent intent = new Intent(SalaryPage.this, SpendingType.class);
+            intent.putExtra("periods", paymentsInYear);
+            intent.putExtra("payment", paymentPerPeriod);
+            startActivity(intent);
         });
-        quarterlyButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // Click-handling logic
-                paymentsInYear = 4;
-                paymentPerPeriod = Double.parseDouble(clientInput.getText().toString());
-                Intent intent = new Intent(SalaryPage.this, SpendingType.class);
-                intent.putExtra("periods", paymentsInYear);
-                intent.putExtra("payment", paymentPerPeriod);
-                startActivity(intent);
-            }
+        quarterlyButton.setOnClickListener(view -> {
+            // Click-handling logic
+            paymentsInYear = 4;
+            paymentPerPeriod = Double.parseDouble(clientInput.getText().toString());
+            Intent intent = new Intent(SalaryPage.this, SpendingType.class);
+            intent.putExtra("periods", paymentsInYear);
+            intent.putExtra("payment", paymentPerPeriod);
+            startActivity(intent);
         });
     }
 }
