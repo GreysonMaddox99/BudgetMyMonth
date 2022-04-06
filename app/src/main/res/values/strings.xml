@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">BudgetMyMonth</string>
+    <string name="indicate_below_what_kind_of_spender_n_you_are_also_indicate_whether_you_n_want_to_be_aggressive_with_your_n_investments">Indicate below what kind of spender \n you are. Also, indicate whether you \n want to be aggressive with your \n investments</string>
+    <string name="passive_some_may_call_you_frugal_others_may_call_you_a_genius">Passive (some may call you frugal, others may call you a genius)</string>
+    <string name="quot_treat_yourself_quot_you_never_want_to_think_about_whether_or_not_you_should_buy_something">\"Treat Yourself\" (you never want to think about whether or not you should buy something)</string>
+    <string name="average_you_strictly_adhere_to_the_teachings_of_dave_ramsey_and_won_t_be_fooled_by_any_false_idols">Average (you strictly adhere to the teachings of Dave Ramsey and won\'t be fooled by any false idols)</string>
+    <string name="budgetme">BudgetMe</string>
+    <string name="quot_i_want_to_be_aggressive_with_my_investments_quot">\"I want to be aggressive with my investments\"</string>
 </resources>

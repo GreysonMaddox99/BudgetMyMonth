@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
-        android:text="Indicate below what kind of spender \n you are. Also, indicate whether you \n want to be aggressive with your \n investments"
+        android:text="@string/indicate_below_what_kind_of_spender_n_you_are_also_indicate_whether_you_n_want_to_be_aggressive_with_your_n_investments"
         android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,21 +32,21 @@
             android:id="@+id/frugal_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Passive (some may call you frugal, others may call you a genius)"
+            android:text="@string/passive_some_may_call_you_frugal_others_may_call_you_a_genius"
             android:textAlignment="center" />
 
         <RadioButton
             android:id="@+id/spendthrift_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="&quot;Treat Yourself&quot; (you never want to think about whether or not you should buy something)"
+            android:text="@string/quot_treat_yourself_quot_you_never_want_to_think_about_whether_or_not_you_should_buy_something"
             android:textAlignment="center" />
 
         <RadioButton
             android:id="@+id/average_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Average (you strictly adhere to the teachings of Dave Ramsey and won't be fooled by any false idols)"
+            android:text="@string/average_you_strictly_adhere_to_the_teachings_of_dave_ramsey_and_won_t_be_fooled_by_any_false_idols"
             android:textAlignment="center" />
     </RadioGroup>
 
@@ -55,20 +55,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:minHeight="48dp"
-        android:text="&quot;I want to be aggressive with my investments&quot;"
+        android:text="@string/quot_i_want_to_be_aggressive_with_my_investments_quot"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spenders"
-        app:layout_constraintVertical_bias="0.299" />
+        app:layout_constraintVertical_bias="0.299"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
 
     <Button
         android:id="@+id/budget_me_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
-        android:text="BudgetMe"
+        android:text="@string/budgetme"
         app:layout_constraintEnd_toEndOf="@+id/aggressive_switch"
         app:layout_constraintStart_toStartOf="@+id/aggressive_switch"
         app:layout_constraintTop_toBottomOf="@+id/aggressive_switch" />
