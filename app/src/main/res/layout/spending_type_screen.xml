@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/spending_type_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="Indicate below what kind of spender \n you are. Also, indicate whether you \n want to be aggressive with your \n investments"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/spenders"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/spending_type_header"
+        app:layout_constraintStart_toStartOf="@+id/spending_type_header"
+        app:layout_constraintTop_toBottomOf="@+id/spending_type_header">
+
+        <RadioButton
+            android:id="@+id/frugal_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Passive (some may call you frugal, others may call you a genius)"
+            android:textAlignment="center" />
+
+        <RadioButton
+            android:id="@+id/spendthrift_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="&quot;Treat Yourself&quot; (you never want to think about whether or not you should buy something)"
+            android:textAlignment="center" />
+
+        <RadioButton
+            android:id="@+id/average_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Average (you strictly adhere to the teachings of Dave Ramsey and won't be fooled by any false idols)"
+            android:textAlignment="center" />
+    </RadioGroup>
+
+    <Switch
+        android:id="@+id/aggressive_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:text="&quot;I want to be aggressive with my investments&quot;"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spenders"
+        app:layout_constraintVertical_bias="0.299" />
+
+    <Button
+        android:id="@+id/budget_me_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="BudgetMe"
+        app:layout_constraintEnd_toEndOf="@+id/aggressive_switch"
+        app:layout_constraintStart_toStartOf="@+id/aggressive_switch"
+        app:layout_constraintTop_toBottomOf="@+id/aggressive_switch" />
+</androidx.constraintlayout.widget.ConstraintLayout>

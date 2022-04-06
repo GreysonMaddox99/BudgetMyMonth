@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/results_header_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Per month, you should spend: "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/wants_results"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="104dp"
+        android:text="$0 on Wants"
+        app:layout_constraintEnd_toEndOf="@+id/needs_results"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/needs_results"
+        app:layout_constraintTop_toBottomOf="@+id/needs_results" />
+
+    <TextView
+        android:id="@+id/savings_results"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        android:text="$0 on Savings"
+        app:layout_constraintEnd_toEndOf="@+id/wants_results"
+        app:layout_constraintStart_toStartOf="@+id/wants_results"
+        app:layout_constraintTop_toBottomOf="@+id/wants_results" />
+
+    <TextView
+        android:id="@+id/investments_results"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="104dp"
+        android:text="$0 on Investments"
+        app:layout_constraintEnd_toEndOf="@+id/savings_results"
+        app:layout_constraintHorizontal_bias="0.518"
+        app:layout_constraintStart_toStartOf="@+id/savings_results"
+        app:layout_constraintTop_toBottomOf="@+id/savings_results" />
+
+    <TextView
+        android:id="@+id/needs_results"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        android:text="$0 on Needs"
+        app:layout_constraintEnd_toEndOf="@+id/results_header_text"
+        app:layout_constraintStart_toStartOf="@+id/results_header_text"
+        app:layout_constraintTop_toBottomOf="@+id/results_header_text" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
